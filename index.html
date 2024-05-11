@@ -1,12 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-dark">
+      <a class="navbar-brand text-primary">Weather</a>
+      <form class="form-inline">
+        <input
+          class="form-control mr-sm-2"
+          type="text"
+          autocomplete="address-level3"
+          placeholder="Search"
+          autofocus
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
+    </nav>
+    <!-- <div class="conatainer">
+        <form >
+            <input type="text" name="input" id="input">
+            <button type="submit">Search heres..</button>
+        </form>
+    </div> -->
+    <!-- cards -->
+<div id="all-container">
+      <div class="container">
+        <h4 id="current-location"></h4>
+      <div class="row">
+        
+          <div class="card" id="meanCard"   style="width: 70rem; height: 22rem;">
+            <div class="card-body">
+              <h4 class="card-title" id="current-weather"></h4>
+              <div class="row w-100">
+               <div class="col-12 col-md-6" style="display:flex;">
+                 <!-- <img src="./img/01_weather.png" alt="" class="h-25 w-25"> -->
+               <h1 id="currTem"></h1><sup style="margin-top: 2vw;color: #fff;"></sup>
+               </div>
+               <div class="co-12 col-4">
+                <h5 id="current-cloud">
+
+                </h5>
+                <h5 id="fills-like"></h5>
+               </div>
+              </div>
+               <div class="card-footer my-5 p-3">
+              <div class="row">
+                <div class="col-6 col-md-2">
+                  <div class="card allCards" style=" width: 9rem; background: rgba(0, 0, 0, 0.3);border-radius: 2vw; box-shadow: 0px 0px 3px 3px #fff; ">
+  <div class="card-body">
+    <h5 class="card-title"><i class="fa-solid fa-cloud"></i>cloud</h5>
+    <h6 class="card-subtitle text-5 mb-2" id="cloud">0</h6>
+   
+  </div>
+</div>
+                </div>
+                <div class="col-6 col-md-2">
+                  <div class="card  allCards" style=" width: 9rem; background: rgba(0, 0, 0, 0.3);border-radius: 2vw; box-shadow: 0px 0px 3px 3px #fff; ">
+  <div class="card-body">
+    <h5 class="card-title"><i class="fa-solid fa-user"></i>Humidity</h5>
+    <h6 class="card-subtitle text-5 mb-2" id="Humidity">100</h6>
+   
+  </div>
+</div>
+                </div>
+                <div class="col-6 col-md-2">
+                  <div class="card  allCards" style=" width: 9rem; background: rgba(0, 0, 0, 0.3);border-radius: 2vw; box-shadow: 0px 0px 3px 3px #fff;">
+  <div class="card-body">
+    <h5 class="card-title"><i class="fa-solid fa-eye-slash"></i>Visibilty</h5>
+    <h6 class="card-subtitle text-5 mb-2" id="Visibilty">200</h6>
+   
+  </div>
+</div>
+                </div>
+                <div class="col-6 col-md-2">
+                  <div class="card  allCards" style=" width: 9rem; background: rgba(0, 0, 0, 0.3);border-radius: 2vw; box-shadow: 0px 0px 3px 3px #fff; ">
+  <div class="card-body">
+    <h5 class="card-title"><i class="fa-solid fa-tower-broadcast"></i>Pressure</h5>
+    <h6 class="card-subtitle text-5 mb-2" id="Pressure">0</h6>
+ 
+  </div>
+</div>
+                </div>
+                                <div class="col-6 col-md-2">
+                  <div class="card  allCards" style=" width: 9rem; background: rgba(0, 0, 0, 0.3);border-radius: 2vw; box-shadow: 0px 0px 3px 3px #fff; ">
+  <div class="card-body">
+        <h5 class="card-title"><i class="fa-solid fa-wind"></i>wind</h5>
+    <h6 class="card-subtitle text-5 mb-2" id="wind_kph">0</h6>
+ 
+  </div>
+</div>
+                </div>
+                                <div class="col-6 col-md-2">
+                  <div class="card  allCards" style=" width: 9rem; background: rgba(0, 0, 0, 0.3);border-radius: 2vw; box-shadow: 0px 0px 3px 3px #fff; ">
+  <div class="card-body">
+    <h5 class="card-title"><i class="fa-solid fa-sun-plant-wilt"></i> UV</h5>
+    <h6 class="card-subtitle text-5 mb-2" id="UV">0</h6>
+ 
+  </div>
+</div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+     <div class="container-fluid " id="map-container">
+      <div class="container" style="height: 75vh;">
+           <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15249885.318783779!2d82.75252935!3d21.0680074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2z4KSt4KS-4KSw4KSk!5e0!3m2!1shi!2sin!4v1711448337336!5m2!1shi!2sin"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+      </div>
+      </div>
+   
+</div>
+    <!-- background-image: url('https://lh3.googleusercontent.com/9XxQuzRuglgJY2vgqilReXfqB0tFSEuvZdkSbzUlBRp-Ff2mNdiFOURQl23MCDSPQqiBlRbEal0M3WuJtvx8luIG=w640-h400-e365-rj-sc0x00ffffff');background-size: cover; -->
     <script src="script.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
+

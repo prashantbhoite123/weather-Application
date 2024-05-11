@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.temp-container {
+  display: flex;
+}
+
+#meanCard {
+  border-radius: 3vw;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 5px #fff;
+}
+
+.allCards {
+  color: #000;
+}
+.card-subtitle {
+  text-align: center;
+  font-size: 1.5vw;
+  color: #fff;
+}
+#current-location {
+  color: #fff;
+}
+#all-container {
+  /* margin-top: -3.5vw; */
+  height: 70vh;
+  width: 100vw;
+}
+.bodyImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#map-container {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+#current-location {
+  font-size: 2vw;
+  color: #000;
+}
+#current-weather {
+  font-size: 1.5vw;
+  color: #000;
+}
+
+#currTem {
+  font-size: 6vw;
+  color: #fff;
+}
+#current-cloud {
+  font-size: 3vw;
+  color: #000;
+}
+#fills-like {
+  font-size: 3vw;
+  color: #000;
+}
+
+@media (max-width: 800px) {
+  #all-container {
+    height: 84vh;
+  }
+  #current-location {
+    color: yellow;
+    font-size: 6vw;
+  }
+  #current-weather {
+    font-size: 5vw;
+  }
+  #currTem {
+    font-size: 10vw;
+  }
+  #current-cloud {
+    color: #000000;
+    font-size: 8vw;
+  }
+  #fills-like {
+    color: orange;
+    font-size: 8vw;
+  }
+  .card-footer {
+    margin-top: 13vw;
+  }
+  .card-subtitle {
+    font-size: 5vw;
+  }
+  .allCards {
+    margin-top: 2vw;
+  }
+}
