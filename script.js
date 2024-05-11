@@ -56,17 +56,17 @@ const changeback = (Sunny) => {
   if (Sunny === "Mist") {
     body.classList.add("bodyImage")
     body.style.backgroundImage =
-      "Url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQry8DUHOkRbymLdjpHz-iR5MvHQv3b4MF0vityjrNBAY4jValjYTBaD3OddlhaNKwCDXE&usqp=CAU')"
+      "Url('https://i.pinimg.com/originals/3c/6d/81/3c6d812bd53d19b45202e5483380b97a.gif')"
   } else if (Sunny === "Sunny") {
     body.classList.add("bodyImage")
     body.style.backgroundImage =
       "Url('https://c8.alamy.com/comp/DM5YYE/partly-sunny-weather-DM5YYE.jpg')"
   } else if (Sunny === "Partly cloudy") {
-      body.classList.add("bodyImage")
+    body.classList.add("bodyImage")
     body.style.backgroundImage =
       "Url('https://i.pinimg.com/originals/3c/6d/81/3c6d812bd53d19b45202e5483380b97a.gif')"
   } else if (Sunny === " Cloudy") {
-      body.classList.add("bodyImage")
+    body.classList.add("bodyImage")
     body.style.backgroundImage =
       "Url('https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?cs=srgb&dl=pexels-pixabay-158163.jpg&fm=jpg')"
   } else if (Sunny === "Light rain") {

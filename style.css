@@ -42,24 +42,27 @@
 
 #current-location {
   font-size: 2vw;
-  color: #000;
+  color: yellow;
 }
 #current-weather {
   font-size: 1.5vw;
-  color: #000;
+  color: yellow;
 }
 
 #currTem {
-  font-size: 6vw;
+  font-size: 4vw;
   color: #fff;
 }
 #current-cloud {
-  font-size: 3vw;
-  color: #000;
+  font-size: 2vw;
+  color: yellow;
 }
 #fills-like {
-  font-size: 3vw;
-  color: #000;
+  font-size: 1.5vw;
+  color: yellow;
+}
+.card-title{
+  color: yellow;
 }
 
 @media (max-width: 800px) {
