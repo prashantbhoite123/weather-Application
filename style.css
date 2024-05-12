@@ -61,39 +61,41 @@
   font-size: 1.5vw;
   color: yellow;
 }
-.card-title{
+.card-title {
   color: yellow;
 }
 
 @media (max-width: 800px) {
   #all-container {
-    height: 84vh;
+    height: 100vh;
   }
   #current-location {
-    color: yellow;
     font-size: 6vw;
   }
   #current-weather {
     font-size: 5vw;
   }
   #currTem {
+    margin-top: 3vw;
     font-size: 10vw;
   }
   #current-cloud {
-    color: #000000;
-    font-size: 8vw;
+    margin-top: 6vw;
+    font-size: 5vw;
   }
   #fills-like {
-    color: orange;
-    font-size: 8vw;
+    margin-top: 7vw;
+    font-size: 6vw;
+    color: red;
   }
-  .card-footer {
-    margin-top: 13vw;
-  }
+
   .card-subtitle {
     font-size: 5vw;
   }
   .allCards {
     margin-top: 2vw;
+  }
+  .card-content {
+    margin-top: 4vw;
   }
 }
